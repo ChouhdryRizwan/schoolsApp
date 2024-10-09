@@ -12,9 +12,9 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-start justify-center text-white">
         <div className="container mx-auto px-4">
           <div className="md:w-1/2">
-            <span className="text-gray-400 uppercase">SubHeadline</span>
+            <span className="text-gray-400 uppercase">solve your problem</span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mt-2 mb-4">
-              Enter Your <span className="text-purple-500">Headline Here</span>
+              Find Schools <span className="text-purple-500">From World Wide</span>
             </h1>
             <p className="text-gray-400">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem eos ea, cum quae facilis optio impedit tempora aliquam at eveniet?
