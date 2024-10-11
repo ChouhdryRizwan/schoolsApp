@@ -58,8 +58,8 @@ const SchoolSection = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h2 className="text-3xl font-bold text-center mb-6 ">
+    <div className="container mx-auto px-4 py-16">
+      <h2 className="text-3xl font-bold text-center mb-10">
         Schools in&nbsp;
         <span className="text-purple-500">{locationData.city}&nbsp;</span>,
         <span className="text-purple-500">&nbsp;{locationData.country}</span>
@@ -92,8 +92,10 @@ const SchoolSection = () => {
                     <div className="text-gray-900 font-bold text-xl mb-2">
                       {school.name}
                     </div>
-                    <p className="text-gray-700 text-base">
-                      {school.city}, {school.country}
+                    <p className="text-gray-700">
+                      <span className="font-semibold">{school.city} </span>
+                      <span className="">, {school.country}</span>
+
                     </p>
                   </div>
                   <div className="flex items-center">
@@ -118,7 +120,7 @@ const SchoolSection = () => {
               >
                 <button
                   // onClick={handleSeeMore}
-                  className="bg-purple-500 text-white px-4 py-2 rounded-lg border-2 border-transparent hover:bg-white hover:text-black hover:border-purple-500 transition duration-200"
+                  className=" bg-white px-4 py-2 mt-6 rounded-lg border-2 border-transparent hover:bg-purple-500 hover:text-white border-purple-500 transition duration-200"
                 >
                   See More
                 </button>
