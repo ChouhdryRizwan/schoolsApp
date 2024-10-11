@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Hero = () => {
   return (
@@ -14,18 +14,18 @@ const Hero = () => {
           <div className="md:w-1/2">
             <span className="text-gray-400 uppercase">solve your problem</span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mt-2 mb-4">
-              Find Schools <span className="text-purple-500">From World Wide</span>
+              Find Schools{" "}
+              <span className="text-purple-500">From World Wide</span>
             </h1>
             <p className="text-gray-400">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem eos ea, cum quae facilis optio impedit tempora aliquam at eveniet?
+              Find and compare top schools worldwide with School Finder – your
+              trusted resource for the perfect educational match.
             </p>
             <div className="mt-5">
-              <a
-                href="#"
-                className="inline-block bg-purple-500 text-white py-3 px-5 rounded-full hover:bg-white hover:text-black transition mt-3 sm:mt-0"
-              >
+              <button
+                className="inline-block bg-purple-500 text-white py-3 px-5 rounded-full hover:bg-white hover:text-black transition mt-3 sm:mt-0">
                 Get Started
-              </a>
+              </button>
             </div>
           </div>
         </div>
