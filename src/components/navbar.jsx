@@ -1,68 +1,8 @@
 "use client";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  Dialog,
-  DialogPanel,
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  Popover,
-  PopoverButton,
-  PopoverGroup,
-  PopoverPanel,
-} from "@headlessui/react";
-import {
-  ArrowPathIcon,
-  Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
-import {
-  ChevronDownIcon,
-  PhoneIcon,
-  PlayCircleIcon,
-} from "@heroicons/react/20/solid";
-
-const products = [
-  {
-    name: "Analytics",
-    description: "Get a better understanding of your traffic",
-    href: "#",
-    icon: ChartPieIcon,
-  },
-  {
-    name: "Engagement",
-    description: "Speak directly to your customers",
-    href: "#",
-    icon: CursorArrowRaysIcon,
-  },
-  {
-    name: "Security",
-    description: "Your customers’ data will be safe and secure",
-    href: "#",
-    icon: FingerPrintIcon,
-  },
-  {
-    name: "Integrations",
-    description: "Connect with third-party tools",
-    href: "#",
-    icon: SquaresPlusIcon,
-  },
-  {
-    name: "Automations",
-    description: "Build strategic funnels that will convert",
-    href: "#",
-    icon: ArrowPathIcon,
-  },
-];
-const callsToAction = [
-  { name: "Watch demo", href: "#", icon: PlayCircleIcon },
-  { name: "Contact sales", href: "#", icon: PhoneIcon },
-];
+import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -142,24 +82,28 @@ export default function Navbar() {
               <div className="space-y-2 py-6">
                 <Link
                   to="/"
+                  onClick={() => setMobileMenuOpen(false)}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Home
                 </Link>
                 <Link
                   to="/#"
+                  onClick={() => setMobileMenuOpen(false)}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   About
                 </Link>
                 <Link
                   to="/schools"
+                  onClick={() => setMobileMenuOpen(false)}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Schools
                 </Link>
                 <Link
                   to="/#"
+                  onClick={() => setMobileMenuOpen(false)}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Contact
