@@ -197,7 +197,7 @@ const Schools = () => {
           {filteredSchools.map((school, index) => (
             <li
               key={index}
-              className="bg-white p-4 rounded shadow flex justify-between items-center"
+              className="bg-white p-4 rounded shadow flex flex-col md:flex-row justify-between items-center"
             >
               <div className="mx-6">
                 <img
@@ -212,17 +212,18 @@ const Schools = () => {
                 </h3>
                 <p className="font-normal my-1">
                   <span className="text-gray-600 font-semibold">Address: </span>
-                  {school.address} , {school.city}
+                  {school.address}, {school.city}
                 </p>
                 <p className="font-normal">
                   <span className="text-gray-600 font-semibold">Founded: </span>{" "}
                   {school.founded}
                 </p>
               </div>
-              <div className="mr-6">
+              <div className="mr-6 mt-4 md:mt-0">
+                {" "}
                 <button
                   onClick={() => navigate(`/school/${school.id}`)}
-                  className="bg-purple-500 text-white px-4 py-2 rounded-full border-2 border-transparent hover:bg-white hover:text-black hover:border-purple-500 transition duration-200"
+                  className="bg-purple-500 text-white px-3 py-1 md:py-2 rounded-full border-2 border-transparent hover:bg-white hover:text-black hover:border-purple-500 transition duration-200 text-small md:text-base"
                 >
                   View Details
                 </button>
