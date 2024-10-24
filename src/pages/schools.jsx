@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import axios from "axios"; // Assuming you're using axios for fetching
 
 const Schools = () => {
   const location = useLocation();
@@ -200,17 +199,33 @@ const Schools = () => {
               key={index}
               className="bg-white p-4 rounded shadow flex justify-between items-center"
             >
-              <div className="flex-1">
-                <h3 className="text-xl font-semibold">{school.name}</h3>
-                <p className="text-gray-700 font-semibold">{school.country}</p>
-                <p className="text-blue-500 font-normal"> {school.city}</p>
-              </div>
-              <div className="ml-4">
+              <div className="mx-6">
                 <img
-                  src={school.logo}
+                  src={school.image}
                   alt={school.name}
                   className="w-24 h-24 object-contain"
                 />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold text-purple-600">
+                  {school.name}
+                </h3>
+                <p className="font-normal my-1">
+                  <span className="text-gray-600 font-semibold">Address: </span>
+                  {school.address} , {school.city}
+                </p>
+                <p className="font-normal">
+                  <span className="text-gray-600 font-semibold">Founded: </span>{" "}
+                  {school.founded}
+                </p>
+              </div>
+              <div className="mr-6">
+                <button
+                  onClick={() => navigate(`/school/${school.id}`)}
+                  className="bg-purple-500 text-white px-4 py-2 rounded-full border-2 border-transparent hover:bg-white hover:text-black hover:border-purple-500 transition duration-200"
+                >
+                  View Details
+                </button>
               </div>
             </li>
           ))}

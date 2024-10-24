@@ -7,8 +7,11 @@ import Stats from "./components/stats";
 import Partner from "./components/partners";
 import Hero from "./components/hero";
 import Schools from "./pages/schools";
+import Page from "./pages/page";
+import SchoolDetail from "./pages/schooldetails"; // Import the SchoolDetail component
 import Banner from "./components/banner";
 import Footer from "./components/footer";
+import AboutUs from "./components/about";
 
 const App = () => (
   <Router>
@@ -20,6 +23,7 @@ const App = () => (
           <>
             <Hero />
             <SchoolSection />
+            {/* <AboutUs /> */}
             <Banner />
             <Stats />
             {/* <Partner /> */}
@@ -32,7 +36,24 @@ const App = () => (
         element={
           <>
             <Schools />
-            <Footer /> {/* Footer included on the schools page */}
+            <Footer />
+          </>
+        }
+      />
+      <Route
+        path="/school/:id"
+        element={
+          <>
+            <SchoolDetail />
+            <Footer />
+          </>
+        }
+      />
+      <Route
+        path="/page"
+        element={
+          <>
+            <Page />
           </>
         }
       />

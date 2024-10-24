@@ -8,7 +8,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white">
+    <header className="bg-white mx-6 md:mx-10">
       <nav
         aria-label="Global"
         className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8"
